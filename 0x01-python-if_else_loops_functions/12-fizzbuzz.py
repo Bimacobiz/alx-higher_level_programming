@@ -7,7 +7,8 @@ def fizzbuzz():
 
     Print Fizz instead of the number for the multiples of three.
     Print Buzz instead of the number in case of multiples of five.
-    Print FizzBuzz instead of the number in the case of multiples of three and five.
+    Print FizzBuzz instead of the number in the case of multiples 
+    of three and five.
     """
     for number in range(1, 101):
         if number % 3 == 0 and number % 5 == 0:
