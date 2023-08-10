@@ -4,10 +4,9 @@
 
 def fizzbuzz():
     """Print the numbers from 1 to 100 separated by a space.
-
     Print Fizz instead of the number for the multiples of three.
     Print Buzz instead of the number in case of multiples of five.
-    Print FizzBuzz instead of the number in the case of multiples 
+    Print FizzBuzz instead of the number in the case of multiples
     of three and five.
     """
     for number in range(1, 101):
