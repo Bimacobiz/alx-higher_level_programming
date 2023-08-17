@@ -20,7 +20,7 @@ def roman_to_int(roman_string):
     rom_n = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     list_keys = list(rom_n.keys())
 
-    number = 0
+    num = 0
     last_rom = 0
     list_num = [0]
 
@@ -37,4 +37,4 @@ def roman_to_int(roman_string):
 
     num += to_subtract(list_num)
 
-    return (number)
+    return (num)
