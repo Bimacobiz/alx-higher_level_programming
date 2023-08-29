@@ -1,17 +1,23 @@
 #!/usr/bin/python3
 
 def safe_print_list(my_list=[], x=0):
-    """Print x elements of a list.
+    """The function will print x elememts of a given list.
 
     Args:
-        my_list (list): The list to print elements from.
-        x (int): The number of elements of my_list to print.
+        my_list (list): List provided from which to print elements.
+        x (int): The number of elements contained in my_list to print.
 
     Returns:
-        The number of elements printed.
+        The number of elements that have been printed.
     """
-    elements_to_print = my_list[:x]  # Use list slicing to get the elements to print
-    for element in elements_to_print:
-        print("{}".format(element), end="")
+    ret = 0  # Initialize a variable to keep track of the printed elements
+    for i in range(x):
+        try:
+            # Try to print the i-th element of the list
+            print("{}".format(my_list[i]), end="")
+            ret += 1  # Increment the counter of printed elements
+        except IndexError:
+            # Handle the case when the index is out of bounds
+            break  # Exit the loop if an IndexError occurs (no more elements to print)
     print("")  # Print a newline after printing the elements
-    return len(elements_to_print)  # Return the number of elements actually printed
+    return ret  # Return the number of elements actually printed
