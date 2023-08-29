@@ -18,6 +18,6 @@ def safe_print_list(my_list=[], x=0):
             ret += 1  # Increment the counter of printed elements
         except IndexError:
             # Handle the case when the index is out of bounds
-            break  # Exit the loop if an IndexError occurs (no more elements to print)
+            break  # Exit the loop if an IndexError occurs
     print("")  # Print a newline after printing the elements
     return ret  # Return the number of elements actually printed
