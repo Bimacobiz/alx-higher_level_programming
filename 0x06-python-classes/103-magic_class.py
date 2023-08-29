@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Definition of a MagicClass matching the bitecode that Holberton has provided."""
+"""Definition of a MagicClass matching the bitecode of Holberton."""
 
 import math
 
