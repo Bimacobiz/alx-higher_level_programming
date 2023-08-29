@@ -11,19 +11,19 @@ def list_division(my_list_1, my_list_2, list_length):
     Returns:
         A new list of list_length that contains the divisions done.
     """
-    new_list = []  # Initialize an empty list to store the division results
+    new_list = []
     for i in range(0, list_length):
         try:
-            div = my_list_1[i] / my_list_2[i]  # Attempt to perform division
+            div = my_list_1[i] / my_list_2[i]
         except TypeError:
-            print("wrong type")  # Handle TypeError by printing an error message
+            print("wrong type")
+            div = 0
+        except ZeroDivisionError:
+            print("division by 0")
             div = 0
         except IndexError:
-            print("out of range")  # Handle IndexError by printing an error message
-            div = 0
-	except ZeroDivisionError:
-            print("division by 0")  # Handle ZeroDivisionError by printing an error message
+            print("out of range")
             div = 0
         finally:
-            new_list.append(div)  # Append the division result to the new list
-    return new_list  # Return the list of division results
+            new_list.append(div)
+    return (new_list)
