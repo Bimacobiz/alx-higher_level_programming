@@ -14,7 +14,7 @@ Attributes:
     solutions (list): a collection of listings that include solutions.
 
 Solutions should be in the format of [[r, c], [r, c], [r, c], [r, c]]
-where `r` and `c` are representing a row and column respectively. 
+where `r` and `c` are representing a row and column respectively.
 Where a queen must be on the chessboard.
 """
 import sys
