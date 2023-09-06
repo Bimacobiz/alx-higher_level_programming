@@ -64,26 +64,25 @@ A TypeError is raised if either parameter is neither an integer nor a float:
 ::
 
     >>> add_integer("hello", 3)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-
+    Traceback (the most recent call):
+    TypeError: an integer a must exist.
 ::
 
     >>> add_integer(2, "hello")
-    Traceback (most recent call last):
-    TypeError: b must be an integer
+    Traceback (last call's most recent):
+    TypeError: an integer b must exist.
 
 ::
 
     >>> add_integer(None)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
+    Traceback (last call's most recent):
+    TypeError: an integer a must exist.
 
 ::
 
     >>> add_integer(2.3, None)
-    Traceback (most recent call last):
-    TypeError: b must be an integer
+    Traceback (last call's most recent):
+    TypeError: an integer b must exist.
 
 A TypeError warning is only printed for the first parameter 
 if both inputs are not integers or floats.
@@ -91,34 +90,35 @@ if both inputs are not integers or floats.
 ::
 
     >>> add_integer("hello", "there")
-    Traceback (most recent call last):
-    TypeError: a must be an integer
+    Traceback (last call's most recent):
+    TypeError: an integer a must exist.
 
 If infinity is supplied, the function will not succeed.
 
 ::
 
     >>> add_integer(float('inf'))
-    Traceback (most recent call last):
-    OverflowError: cannot convert float infinity to integer
+    Traceback (last call's most recent):
+    OverflowError: cannot translate a float infinity to an integer
      
 
 ::
 
     >>> add_integer(2, float('inf'))
-    Traceback (most recent call last):
-    OverflowError: cannot convert float infinity to integer
+    Traceback (last call's most recent):
+    OverflowError: cannot translate a float infinity to an integer
 
 And again with NaN numbers.
 
 ::
 
     >>> add_integer(float('nan'))
-    Traceback (most recent call last):
-    ValueError: cannot convert float NaN to integer
+    Traceback (last call's most recent)):
+    ValueError: float NaN cannot be converted to an integer
 
 ::
 
     >>> add_integer(2, float('nan'))
-    Traceback (most recent call last):
-    ValueError: cannot convert float NaN to integer
+    Traceback (last call's most recent)):
+    ValueError: float NaN cannot be converted to an integer
+
