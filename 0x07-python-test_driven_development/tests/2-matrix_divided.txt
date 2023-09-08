@@ -71,14 +71,14 @@ floats. A TypeError is thrown if ''matrix'' is not a list.
 
     >>> matrix = "not a list"
     >>> print(matrix_divided(matrix, 3))
-    Traceback (latest call is the most recent):
+    Traceback (most recent call last):
     TypeError:  Matrix must be a matrix (set of lists) of integers or floats; 
 
 ::
 
     >>> matrix = None
     >>> print(matrix_divided(matrix, 3))
-    Traceback (latest call is the most recent):
+    Traceback (most recent call last):
     TypeError: Matrix must be a matrix (set of lists) of integers or floats; 
 
 The TypeError will be raised if the list is empty.
@@ -87,7 +87,7 @@ The TypeError will be raised if the list is empty.
 
     >>> matrix = []
     >>> print(matrix_divided(matrix, 3))
-    Traceback (latest call is the most recent):
+    Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 But a list of empty lists will prevail..
