@@ -2,7 +2,6 @@
 # 3-say_my_name.py
 """Defines a name-printing function."""
 
-# The script starts with the shebang line to specify the Python interpreter.
 
 def say_my_name(first_name, last_name=""):
     """Print a name.
@@ -27,4 +26,3 @@ def say_my_name(first_name, last_name=""):
 
     # If both first_name and last_name are strings, print the formatted name.
     print("My name is {} {}".format(first_name, last_name))
-
