@@ -11,7 +11,7 @@
  */
 void print_python_string(PyObject *p)
 {
-	long int string_len;
+	long int length;
 
 	fflush(stdout);
 
@@ -22,12 +22,12 @@ void print_python_string(PyObject *p)
 		return;
 	}
 
-	string_len = ((PyASCIIObject *)(p))->string_len;
+	length = ((PyASCIIObject *)(p))->length;
 
 	if (PyUnicode_IS_COMPACT_ASCII(p))
 		printf("  type: compact ascii\n");
 	else
 		printf("  type: compact unicode object\n");
-	printf("  string_len: %ld\n", string_len);
-	printf("  value: %ls\n", PyUnicode_AsWideCharString(p, &string_len));
+	printf("  string_len: %ld\n", length);
+	printf("  value: %ls\n", PyUnicode_AsWideCharString(p, &length));
 }
