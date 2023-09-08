@@ -52,7 +52,7 @@ new lines; all other text is not terminated with a new line.
 ::
 
     >>> text_indentation("No ending period, poor grammar")
-    No ending period, por grammar
+    No ending period, poor grammar
 
 Within a string, new lines are printed normally.
 
