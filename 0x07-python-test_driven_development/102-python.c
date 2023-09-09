@@ -5,8 +5,7 @@
 #include "Python.h"
 
 /**
- * print_python_string - a function that prints information
- *with regards to Python strings.
+ * print_python_string - Prints information about Python strings.
  * @p: A PyObject string object.
  */
 void print_python_string(PyObject *p)
@@ -28,6 +27,6 @@ void print_python_string(PyObject *p)
 		printf("  type: compact ascii\n");
 	else
 		printf("  type: compact unicode object\n");
-	printf("  string_len: %ld\n", length);
+	printf("  length: %ld\n", length);
 	printf("  value: %ls\n", PyUnicode_AsWideCharString(p, &length));
 }
