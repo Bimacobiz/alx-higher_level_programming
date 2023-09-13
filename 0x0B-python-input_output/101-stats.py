@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Reads from standard input then computes metrics.
 
-It will print the the statistics below after every 10 lines 
+It will print the the statistics below after every 10 lines
 or when the user inputs the keyboard interruption (CTRL + C),
 prints the following statistics:
     - Total size of the file to that point.
