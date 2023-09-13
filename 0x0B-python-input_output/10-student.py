@@ -20,7 +20,7 @@ class Student:
     def to_json(self, attrs=None):
         """Obtain the dictionary rep of the student.
 
-        If attrs is a list of strings, it represents the 
+        If attrs is a list of strings, it represents the
         attributes that a list contains.
 
         Args:
