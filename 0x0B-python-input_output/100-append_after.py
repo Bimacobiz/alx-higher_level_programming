@@ -8,7 +8,8 @@ def append_after(filename="", search_string="", new_string=""):
 
     Args:
         filename (str): The file's name.
-        search_string (str): The string that should be searched withing the file.
+        search_string (str): The string that should be searched withing 
+        the file.
         new_string (str): String that should be inserted.
     """
     text = ""
