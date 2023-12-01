@@ -4,19 +4,15 @@
 if __name__ == "__main__":
     import requests
     import sys
-    url = "https://api.github.com/"
-    username = sys.argv[1]
-    repo = sys.argv[2]
-    commits_url = url + "repos/{}/{}/commits".format(username, repo)
-    response = requests.get(commits_url)
-    if response.status_code == requests.codes.ok and len(response.text) > 0:
-        try:
-            my_obj = response.json()
-            for i, obj in enumerate(my_obj):
-                if i == 10:
-                    break
-                if type(obj) is dict:
-                    name = obj.get('commit').get('author').get('name')
-                    print("{}: {}".format(obj.get('sha'), name))
-        except ValueError as invalid_json:
-            pass
+    import json
+    repo_owner = sys.argv[2]
+    repo_name = sys.argv[1]
+    url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/commits"
+    response = requests.get(url)
+    result = response.json()
+    try:
+        for i in range(10):
+            print(f"{result[i].get('sha')}: ", end="")
+            print(result[i]["commit"]["author"]["name"])
+    except IndexError:
+        pass
